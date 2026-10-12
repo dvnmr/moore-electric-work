@@ -1,0 +1,95 @@
+/* Moore Electric — work portfolio. Dark theme echoing 228mooreelectric.com */
+:root{
+  --bg:#0a0a0a; --panel:#121417; --panel2:#0e0e10; --line:#23262b;
+  --blue:#19c8fa; --volt:#ffd400; --text:#f2f4f5; --sub:#aeb9c0; --dim:#7d8890;
+  --max:1120px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.display{font-family:'Anton',sans-serif;letter-spacing:.5px;text-transform:uppercase;font-weight:400}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;color:var(--volt)}
+section{padding:72px 0}
+h2.display{font-size:clamp(1.9rem,5vw,3rem);margin:10px 0 8px}
+h2 .stroke{color:transparent;-webkit-text-stroke:1.5px var(--blue)}
+.sub{color:var(--sub);max-width:66ch}
+
+header.site{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.brand{font-family:'Anton',sans-serif;font-size:1.25rem;color:var(--text);letter-spacing:.5px}
+.brand small{display:block;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.3em;color:var(--volt)}
+.brand:hover{text-decoration:none}
+nav.links{display:flex;gap:22px;flex-wrap:wrap}
+nav.links a{color:var(--text);font-size:.95rem}
+nav.links a:hover{color:var(--blue);text-decoration:none}
+.btn{display:inline-block;padding:13px 22px;border-radius:8px;font-weight:700;min-height:48px}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+.btn-volt{background:var(--volt);color:#0a0a0a}
+.btn-ghost{border:1px solid var(--line);color:var(--text)}
+
+/* hero */
+.hero{position:relative;padding:0}
+.hero figure{position:relative}
+.hero img{width:100%;height:min(74vh,640px);object-fit:cover}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,6,8,.88) 22%,rgba(5,6,8,.35) 60%,rgba(5,6,8,.05))}
+.hero .hero-in{position:absolute;inset:0;display:flex;align-items:center}
+.hero h1{font-size:clamp(2.5rem,8vw,5rem);line-height:1.02;margin:12px 0 14px}
+.hero h1 .stroke{color:transparent;-webkit-text-stroke:2px var(--volt)}
+.hero p{max-width:54ch;color:#d7dee3;font-size:1.08rem}
+.hero .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+
+/* badges */
+.badges{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+@media(max-width:860px){.badges{grid-template-columns:1fr}}
+.badge{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px;text-align:center}
+.badge .stars{color:var(--volt);font-size:1.3rem;letter-spacing:3px}
+.badge .big{font-family:'Anton',sans-serif;font-size:2rem;margin:6px 0 2px}
+.badge p{color:var(--sub);font-size:.92rem}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+@media(max-width:960px){.gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.gallery{grid-template-columns:1fr}}
+.gallery figure{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.gallery img{width:100%;height:260px;object-fit:cover}
+.gallery figcaption{padding:12px 14px;color:var(--sub);font-size:.9rem}
+.gallery figcaption strong{color:var(--text);display:block;font-size:.95rem}
+
+/* reviews */
+.grid{display:grid;gap:18px;margin-top:34px}
+.grid.c3{grid-template-columns:repeat(3,1fr)}
+.grid.c2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:860px){.grid.c3,.grid.c2{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px}
+.card .stars{color:var(--volt);letter-spacing:3px;margin-bottom:10px}
+.card blockquote{color:#dde4e8;font-size:1rem}
+.card .who{margin-top:14px;color:var(--text);font-weight:600}
+.card .who small{display:block;color:var(--dim);font-weight:400}
+.card .src{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+
+/* services & area */
+ul.ticks{list-style:none}
+ul.ticks li{padding:9px 0 9px 26px;position:relative;color:var(--sub);border-bottom:1px solid var(--line)}
+ul.ticks li::before{content:"▸";position:absolute;left:2px;color:var(--volt)}
+ul.ticks li strong{color:var(--text)}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.chip{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:8px 16px;color:var(--text);font-size:.95rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:30px}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+
+/* CTA + footer */
+.cta-band{background:var(--volt);color:#0a0a0a;text-align:center}
+.cta-band h2{font-size:clamp(2rem,6vw,3.4rem)}
+.cta-band p{max-width:52ch;margin:10px auto 24px;color:#26230a}
+.cta-band .btn-dark{background:#0a0a0a;color:var(--volt);font-size:1.15rem;padding:16px 30px}
+footer.site{padding:38px 0 90px;color:var(--dim);font-size:.9rem}
+footer.site .row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.callbar{position:fixed;left:0;right:0;bottom:0;display:none;background:#0d0f11;border-top:2px solid var(--volt);z-index:60}
+.callbar a{flex:1;text-align:center;padding:15px;font-weight:700;color:var(--text)}
+.callbar a:first-child{background:var(--volt);color:#0a0a0a}
+@media(max-width:768px){.callbar{display:flex}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
